@@ -14,6 +14,8 @@ gameForm.addEventListener('submit', function (evt) {
   var gameNumberInput = parseInt(gameForm.querySelector('.game-number-input').value.trim(), 10);
 
   if (!isNaN(gameNumberInput)) {
+    gameResult.classList.add('bg-info');
+    gameResult.classList.remove('alert', 'alert-danger', 'text-dark');
     if (gameNumberInput % 3 == 0 && gameNumberInput % 5 == 0) {
       gameResult.textContent = DIVIDES_TO_THREE_AND_FIVE;
     } else if (gameNumberInput % 3 == 0) {
@@ -27,5 +29,7 @@ gameForm.addEventListener('submit', function (evt) {
     }
   } else {
       gameResult.textContent = 'Iltimos, son kiriting )';
+      gameResult.classList.add('alert', 'alert-danger', 'text-dark');
+      gameResult.classList.remove('bg-info');
   }
 });
