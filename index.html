@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>55-dars. Bootstrap. container va boshqa umumiy masalalar</title>
+  <title>FizzBuzz</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
- 
-  
+  <h1 class="sr-only">Let's play a game!</h1>
+  <section class="py-5">
+    <div class="container d-flex flex-column align-items-center">
+      <h2 class="h1 text-center text-info mb-5">FizzBuzz</h2>
+      <form class="game-form d-flex align-items-center justify-content-center mb-5" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form-group mb-0 mr-3">
+          <label class="sr-only" for="number-input">Ixtiyoriy son kiriting.</label>
+          <input class="form-control" id="number-input" name="number" type="number" placeholder="Ixtiyoriy son kiriting" required>
+        </div>
+        <button class="btn btn-outline-info" type="submit">Natijani ko'rsat</button>
+      </form>
+      <p class="game-result h2 text-center btn-info px-5 py-1 rounded mb-0">Fizz</p>
+    </div>
+  </section>
 
 
   <script src="js/jquery-3.5.1.min.js"></script>
