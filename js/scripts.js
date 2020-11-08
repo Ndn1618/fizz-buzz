@@ -5,13 +5,14 @@ var DIVIDES_TO_THREE_AND_FIVE = 'FizzBuzz';
 
 // Choosing elements
 var gameForm = document.querySelector('.game-form');
+var gameValueInput = gameForm.querySelector('.game-number-input');
 var gameResult = document.querySelector('.game-result');
 
 gameForm.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
   // Taking value of number input
-  var gameNumberInput = parseInt(gameForm.querySelector('.game-number-input').value.trim(), 10);
+  var gameNumberInput = parseInt(gameValueInput.value.trim(), 10);
 
   if (!isNaN(gameNumberInput)) {
     gameResult.classList.add('bg-info');
@@ -32,4 +33,9 @@ gameForm.addEventListener('submit', function (evt) {
       gameResult.classList.add('alert', 'alert-danger', 'text-dark');
       gameResult.classList.remove('bg-info');
   }
+
+  gameValueInput.value = gameValueInput.value.trim();
+  gameValueInput.focus();
 });
+
+// gameNumberInput = '';
